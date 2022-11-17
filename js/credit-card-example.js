@@ -86,12 +86,15 @@ Promise.all([
 
   // Check for isValid flag changing
   cvv.on('blur', (fieldState) => { 
+    console.log(fieldState)
     keypress = false 
   });
   cvv.on('keypress', (fieldState) => { 
+    console.log(fieldState)
     keypress = true 
   });
   cvv.on('update', (fieldState) => { 
+    console.log(fieldState)
     if (fieldState.isFocused && !keypress && !fieldState.isEmpty) {
       mousePasted = true
     }
